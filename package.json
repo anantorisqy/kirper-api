@@ -1,0 +1,26 @@
+{
+  "name": "kiryuu_scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "fs-extra": "^10.1.0",
+    "helmet": "^5.1.1",
+    "jsdom": "^20.0.0",
+    "nodemon": "^2.0.19",
+    "quick.db": "^9.0.6",
+    "tough-cookie": "^4.0.0"
+  }
+}

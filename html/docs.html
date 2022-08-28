@@ -1,0 +1,911 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kirper rest api for your website and bot">
+    <meta property="og:title" content="Kirper API">
+    <meta property="og:site_name" content="Kirper API">
+    <meta property="og:url" content="kirper.herokuapp.com">
+    <meta name="language" content="English" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Kirper API" />
+    <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Rest Api for Webiste and Bot" />
+    <meta name="twitter:image" content="https://Kirper.herokuapp.com/images/meta-image.png" />
+    <meta property="og:image" content="https://Kirper.herokuapp.com/images/meta-image.png" />
+    <meta property="og:image:alt" content="https://Kirper.herokuapp.com/images/meta-image.png" />
+    <meta property="og:image:secure_url" content="https://Kirper.herokuapp.com/images/meta-image.png" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="515" />
+    <meta property="og:image:height" content="472" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.ico">
+
+    <title>Kirper API</title>
+<    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="custom-navbar">
+        <div class="container">
+            <div class="d-flex">
+                <div class="logo-container">
+                    <a href="/">
+                        <img src="./images/logo.png" alt="..." class="logo">
+                    </a>
+                </div>
+                <div class="flex-fill">
+                    <div class="d-flex justify-content-end pt-lg-2">
+                        <div class="page-links-container">
+                            <a href="/" class="text-decoration-none px-3 py-2 mx-2">Home</a>
+                            <a href="/docs" class="text-decoration-none px-3 py-2 mx-2">Docs</a>
+                            <a href="https://github.com/Mamun-swe/storexapi"
+                                class="text-decoration-none px-3 py-2 mx-2">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="custom-container">
+                <div class="container pt-5">
+                    <div class="row">
+    
+                        <!-- Resources -->
+                        <div class="col-12 mb-5">
+                            <h4 class="h4 mb-0">Resources</h4>
+                            <p class="text-muted mb-4">There are 7 main resources need in store prototypes:</p>
+    
+                            
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            Auth
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/auth">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /auth
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            Store
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/store">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /store
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            Category
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/category">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /category
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            Product
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/product">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /auth/product
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            Cart
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/cart">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /auth/cart
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            User
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/user">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /auth/user
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                    <div>
+                                        <p class="fw-semibold mb-0" style="font-size: 16px !important;">
+                                            Order
+                                        </p>
+                                    </div>
+    
+                                    <div class="ms-auto">
+                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/order">
+                                            <p class="text-break fw-semibold mb-0" style="font-size: 16px !important;">
+                                                /auth/order
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                        </div>
+    
+                        <!-- API Routes -->
+                        <div class="col-12 mb-5">
+                            <h4 class="h4 mb-0">API Routes</h4>
+                            <p class="text-muted mb-4">All HTTP methods are supported</p>
+    
+                            <div>
+                                
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        auth
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Login)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/login">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /auth/login
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Register)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/register">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /auth/register
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Reset)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/auth/reset">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /auth/reset
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        store
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Store)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/store">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /store
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            PUT
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Update)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/store">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /store
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Add profile image)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/store/add-profile-image">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /store/add-profile-image
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Add cover image)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/store/add-cover-image">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /store/add-cover-image
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        category
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (All)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/category?page=1&amp;limit=10">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /category?page=1&amp;limit=10
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Create)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/category">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /category
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Show)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/category/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /category/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            PUT
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Update)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/category/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /category/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        product
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (All)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/product?page=1&amp;limit=10">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /product?page=1&amp;limit=10
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Create)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/product">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /product
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Show)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/product/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /product/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            PUT
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Update)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/product/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /product/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            DELETE
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Destroy)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/product/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /product/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Search)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/product/search">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /product/search
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        cart
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (All)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/cart">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /cart
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Create)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/cart">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /cart
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            PUT
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Update)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/cart/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /cart/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            DELETE
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Destroy)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/cart/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /cart/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        user
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (All)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/user?page=1&amp;limit=10">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /user?page=1&amp;limit=10
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Create)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/user">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /user
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Show)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/user/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /user/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            PUT
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Update)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/user/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /user/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Search)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/user/search">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /user/search
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                                    <h5 class="h5 text-capitalize fw-bold mb-3">
+                                        order
+                                    </h5>
+                                    <div class="mb-4">
+                                        
+                                            
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (All)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/order?page=1&amp;limit=10">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /order?page=1&amp;limit=10
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Create)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/order">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /order
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            GET
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Show)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/order/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /order/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            PUT
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Update)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/order/:id">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /order/:id
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-flex mb-2 ms-md-3 api-routes-list-box">
+                                                    <div style="width: 60px !important;">
+                                                        <p class="fw-semibold mb-0" style="font-size: 15px !important;">
+                                                            POST
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="me-2 mb-0" style="font-size: 15px !important;">
+                                                            (Search)
+                                                        </p>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <a href="https://storexapi.herokuapp.com/api/v1/order/search">
+                                                            <p class="text-break fw-semibold mb-0"
+                                                                style="font-size: 16px !important;">
+                                                                /order/search
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                    </div>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer p-5 text-center">
+        <p class="mb-3">Made with ♥ by <a href="https://mamun-swe.github.io/me"
+                class="fw-semibold text-black text-decoration-none">Abdullah Al Mamun</a></p>
+    
+        <div class="d-flex justify-content-center">
+            <a href="https://github.com/Mamun-swe" class="me-1">
+                <img src="../images/github.png" alt="Github" style="width: 35px; height: 35px;">
+            </a>
+            <a href="https://www.linkedin.com/in/mamun-swe" class="ms-1">
+                <img src="../images/linkedin.png" alt="Linkedin" style="width: 35px; height: 35px;">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
